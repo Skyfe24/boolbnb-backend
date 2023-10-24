@@ -1,0 +1,33 @@
+@use './partials/vars' as *;
+
+
+table {
+    thead {
+        background-color: $logo-color;
+
+        th {
+            padding: 10px 0px;
+
+            &:last-child {
+                border-top-right-radius: 15px;
+            }
+
+            &:first-child {
+                border-top-left-radius: 15px;
+            }
+        }
+    }
+
+    td {
+        &::not(:first-child) {
+            text-align: center;
+        }
+    }
+
+    tbody {
+        tr:hover {
+            cursor: pointer;
+            background-color: $logo-color-light;
+        }
+    }
+}

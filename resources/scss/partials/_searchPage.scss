@@ -1,0 +1,7 @@
+.suggestedAddresses .liAddress{
+    cursor: pointer;
+    &:hover{
+        color: white;
+        background-color: #0d6efd;
+    }
+}

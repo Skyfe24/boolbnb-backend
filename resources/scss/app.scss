@@ -1,0 +1,148 @@
+@use './partials/logo';
+@use './partials/mixin';
+@use './partials/vars' as *;
+@use './partials/resets';
+@use './partials/icons';
+@use './partials/payment';
+@use './partials/searchPage';
+@use './partials/promo';
+@use './partials/graphs';
+
+@use "show";
+@use "register";
+@use "charts";
+@use "buttons";
+@use "header";
+@use "messages";
+
+@import '~bootstrap/scss/bootstrap';
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+
+}
+
+#container {
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0px;
+}
+
+.invalidField {
+    margin: 0px;
+    padding: 0px;
+}
+
+#autocomplete {
+    position: absolute;
+    z-index: 1;
+}
+
+#autocomplete div {
+    cursor: pointer;
+}
+
+// MESSAGES
+.message-container {
+    border: 2px solid $darkBlue;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $lightGray;
+    }
+
+    .truncated {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.spinnerContainer #paymentSpinner.spinner-border {
+    width: 300px;
+    height: 300px;
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    #menu {
+        transform: none;
+        opacity: 0;
+
+        transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+}
+
+.btreebutton {
+    cursor: pointer;
+    font-weight: 500;
+    left: 3px;
+    line-height: inherit;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+}
+
+.button--small {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+}
+
+.button--green {
+    outline: none;
+    background-color: #64d18a;
+    border-color: #64d18a;
+    color: white;
+    transition: all 200ms ease;
+}
+
+.button--green:hover {
+    background-color: #8bdda8;
+    color: white;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: $logo-color-light;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem $logo-color-light;
+}
+
+.form-check-input:checked {
+    background-color: $lightBlue;
+    border-color: $lightBlue;
+}
+
+.form-check-input:focus {
+    border-color: $lightBlue;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem $lightLightBlue;
+}

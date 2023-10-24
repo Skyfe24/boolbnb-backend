@@ -1,0 +1,12 @@
+$base-width: 80%;
+$sm-width: 400px;
+
+$sm: 576px;
+
+.payment-div {
+  width: $base-width;
+
+  @media (min-width: #{$sm}) {
+    width: $sm-width;
+  }
+}

@@ -1,0 +1,74 @@
+.promoEstate img {
+  width: 100%;
+  height: 200px;
+}
+
+.promoCard_1 {
+  background-image: url('http://127.0.0.1:8000/storage/promo_images/silver.png');
+}
+
+.promoCard_2 {
+  background-image: url('http://127.0.0.1:8000/storage/promo_images/gold.png');
+}
+
+.promoCard_3 {
+  background-image: url('http://127.0.0.1:8000/storage/promo_images/platinum.png');
+}
+
+.promoCol .card {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.clockInfo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.promoCol .priceBtn {
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+/* Add a pseudo-element for the shine effect */
+.priceBtn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 70%);
+  transform: rotate(20deg);
+  opacity: 0;
+  animation: shine 1s infinite linear;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Define the shine animation */
+@keyframes shine {
+  0% {
+    transform: rotate(20deg) translateX(-150%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(20deg) translateX(150%);
+    opacity: 1;
+  }
+}
+
+/* Hover effect to make the priceBtn shine on hover */
+.priceBtn:hover::before {
+  opacity: 1;
+}
+
+.sponsorName {
+  text-shadow: 2px 2px 1px black;
+}

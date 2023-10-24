@@ -1,0 +1,22 @@
+.service{
+    width: 95px;
+    height: 60px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 14px;
+}
+
+.iconService{
+    font-size: 1.6rem;
+}
+
+.infoEstate .list-group-item{
+    border: 0;
+}
+
+.previewImages{
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    object-fit: cover;
+}
